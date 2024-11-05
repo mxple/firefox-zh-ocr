@@ -1,0 +1,23 @@
+.zh-ocr-hidden {
+  display: none;
+}
+
+#zh-ocr-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(155, 155, 155);
+  cursor: crosshair;
+  z-index: 9998;
+  mix-blend-mode: multiply;
+}
+
+#zh-ocr-selection {
+  position: fixed;
+  z-index: 9999;
+  border: 2px dashed white; 
+  background: rgb(100, 100, 100);
+  mix-blend-mode: color-dodge;
+}

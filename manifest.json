@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "zh-ocr",
+  "version": "1.0",
+
+  "description": "Chinese dictionary lookup for images and unselectable text.",
+  "homepage_url": "https://github.com/mxple/firefox-zh-ocr",
+  "icons": {
+    "48": "icons/zh-ocr-48.png"
+  },
+
+  "permissions": ["tabs", "activeTab", "scripting"],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["inject.js"],
+      "css": ["styles.css"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "commands": {
+    "take-screenshot": {
+      "suggested_key": {
+        "default": "Alt+Z"
+      },
+      "description": "Take a screenshot"
+    }
+  },
+
+  "web_accessible_resources": [
+    "overlay.js",
+    "test.js"
+  ]
+}
+
